@@ -25,7 +25,27 @@ app.get('/users', function(req,res){
     });
 })
 
+app.delete('/user/:id',function(req,res){
+ const users= user.find(us=> us.id == req.params.id);
+ if(users){
+    res.status(202).json({
+        success:true,
+        message: 'User Exist',
+        id:0
+    });
+    user.pop();
+    
+ }else{
+    res.status(204).json({
+        success:false,
+        message: 'User Not Exist'
+        
+    })
 
+ }
+
+
+})
 app.listen(3000,function(){
     console.log("server is running")
     })
