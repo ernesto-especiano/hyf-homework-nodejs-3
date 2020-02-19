@@ -25,7 +25,6 @@ app.get('/users', function(req,res){
     });
 })
 
-<<<<<<< HEAD
 app.delete('/user/:id',function(req,res){
  const users= user.find(us=> us.id == req.params.id);
  if(users){
@@ -47,9 +46,6 @@ app.delete('/user/:id',function(req,res){
 
 
 })
-=======
-
->>>>>>> ef4252e1f0b874a43f3e31395b7487b144aac6ee
 app.listen(3000,function(){
     console.log("server is running")
     })
